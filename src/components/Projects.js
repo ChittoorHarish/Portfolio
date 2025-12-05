@@ -70,10 +70,31 @@ const Projects = () => {
       github: 'https://github.com/harishchittoor/design-system',
       category: 'Frontend',
       impact: 'Used by 50+ teams'
+    },
+    {
+      id: 7,
+      title: 'TechVen — Music Player (DJ System)',
+      description: 'Feature-rich web music player with real-time audio transformations, an integrated DJ mode (3-band EQ + filters), host-only DJ controls, uploadable local audio, and powerful Web Audio API effects (Lo-Fi, Nightcore, 8D, EDM, reverb, distortion and more).',
+      image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&h=250&fit=crop',
+      techStack: ['React', 'Zustand', 'Web Audio API', 'TailwindCSS'],
+      liveDemo: 'https://chittoorharish.github.io/MusicPlayer/',
+      github: 'https://github.com/ChittoorHarish/MusicPlayer/tree/DJsystem',
+      category: 'Audio',
+      impact: 'Real-time audio processing, DJ panel, and 10+ transformation presets',
+      highlights: [
+        'Real-time audio transformations: Lo-Fi, EDM, Slowed, Nightcore, Bass Boost, Vintage and more',
+        'Upload local audio files (MP3/WAV/OGG) — effects work without CORS restrictions',
+        'Integrated DJ Panel (host-only) with 3-band EQ (±12dB) and filter types (lowpass, highpass, bandpass)',
+        'DJ sound effects (airhorn, scratch, drop) — synthetic by default, supports real MP3s',
+        'Advanced Web Audio API usage: reverb, delay, distortion, 8D spatial panning, dynamic compression',
+        'Speed/tempo controls for Nightcore/Slowed/Upbeat variations and kick drum synthesizer for EDM effect',
+        'Zustand for lightweight state management and TailwindCSS for responsive UI',
+        'Thoughtful UX: host-only controls, graceful fallbacks, mobile-friendly modal and sliders',
+      ]
     }
   ];
 
-  const categories = ['All', 'Frontend', 'Full-Stack'];
+  const categories = ['All', 'Frontend', 'Full-Stack', 'Audio'];
 
   const filteredProjects = activeCategory === 'All'
     ? projects
@@ -149,6 +170,16 @@ const Projects = () => {
             <div style={{ padding: '30px' }}>
               <h2>{selectedProject.title}</h2>
               <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{selectedProject.description}</p>
+              {selectedProject.highlights && (
+                <div style={{ marginBottom: '18px' }}>
+                  <h4 style={{ marginBottom: '8px' }}>Key Highlights</h4>
+                  <ul style={{ paddingLeft: '20px', margin: 0, color: '#444' }}>
+                    {selectedProject.highlights.map((h, i) => (
+                      <li key={i} style={{ marginBottom: '6px' }}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <h4 style={{ marginBottom: '10px' }}>Tech Stack</h4>
               <div className="project-tech" style={{ marginBottom: '25px' }}>
                 {selectedProject.techStack.map((tech, idx) => (
