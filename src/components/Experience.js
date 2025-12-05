@@ -3,25 +3,28 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      date: 'Jan 2020 – Aug 2023',
-      title: 'Senior Application Developer',
+      date: 'Jul 2021 – Jun 2023',
+      title: 'Frontend Software Engineer',
       company: 'IBM',
-      description: 'Led development of enterprise-scale React applications serving Fortune 500 clients. Architected responsive interfaces handling millions of transactions, implemented performance optimizations reducing load times by 60%, and mentored junior developers on best practices.',
-      skills: ['React', 'TypeScript', 'Redux', 'Material-UI', 'Performance Optimization']
+      location: 'Hyderabad, Telangana, India · Hybrid',
+      description: 'Built large-scale, reusable React & TypeScript components, reducing development redundancy by 60% and enabling faster, consistent feature delivery for Philip Morris International. Delivered pixel-perfect, interactive UIs for Walgreens Boots that simplified workflows, increased adoption, and reduced support tickets. Engineered scalable micro-frontend architecture with secure dynamic routing for Maersk, cutting page load times from 8 seconds to 3 seconds and supporting high-traffic global workflows. Translated complex business requirements into intuitive digital experiences, collaborating closely with UX and product teams to improve end-user satisfaction and adoption. Elevated team efficiency and code quality by implementing CI/CD pipelines, mentoring peers, and enforcing best practices, reducing post-release issues and accelerating iterations.',
+      skills: ['React', 'TypeScript', 'Micro-Frontend Architecture', 'JavaScript', 'Node.js', 'CI/CD Pipelines', 'Performance Optimization', 'UI/UX Design', 'Mentoring']
     },
     {
-      date: 'Sep 2023 – Jan 2024',
-      title: 'Full Stack Developer',
-      company: 'Startup X',
-      description: 'Rapidly built MVP for AI-powered SaaS platform. Integrated OpenAI APIs, designed intuitive dashboard UI, implemented real-time updates, and deployed scalable infrastructure on AWS. Drove 300% user growth in first quarter.',
-      skills: ['React', 'Node.js', 'Firebase', 'OpenAI API', 'AWS']
+      date: 'May 2021 – Jul 2021',
+      title: 'Frontend Developer Mobile-React Native',
+      company: 'Steady Rabbit',
+      location: 'Remote',
+      description: 'Developed interactive hybrid mobile app features including dark mode and theme switching, improving usability and engagement for diverse user preferences. Integrated backend APIs to optimize data flow and app reliability, minimizing crashes during high-traffic periods. Enhanced mobile user experience through responsive design, ensuring smooth interactions across devices.',
+      skills: ['React Native', 'Mobile Application Development', 'API Integration', 'Responsive Design', 'Dark Mode Implementation']
     },
     {
-      date: 'Feb 2024 – Present',
-      title: 'Frontend Consultant',
-      company: 'Independent',
-      description: 'Partnering with 5+ SaaS companies to deliver pixel-perfect interfaces and exceptional user experiences. Specialized in design system development, accessibility compliance (WCAG), and performance optimization.',
-      skills: ['React', 'Next.js', 'Tailwind CSS', 'Storybook', 'Web Accessibility']
+      date: 'Jul 2019 – Dec 2019',
+      title: 'Mobile Application Developer (Intern)',
+      company: 'Arawinz Soft Solutions Pvt Ltd',
+      location: 'Hyderabad, TG, India · On-site',
+      description: 'Developed cross-platform mobile features for the "ESAY" app using React Native, delivering intuitive, responsive UI for both Android and iOS platforms. Contributed to the development of the company\'s official website using HTML, CSS, and JavaScript, enhancing design responsiveness and boosting mobile compatibility.',
+      skills: ['React Native', 'HTML/CSS', 'JavaScript', 'Cross-Platform Development', 'Responsive Design']
     }
   ];
 
@@ -44,6 +47,7 @@ const Experience = () => {
                 <div className="timeline-content">
                   <h3>{exp.title}</h3>
                   <div className="timeline-company">{exp.company}</div>
+                  {exp.location && <div className="timeline-location">{exp.location}</div>}
                   <p className="timeline-description">{exp.description}</p>
                   <div className="experience-skills">
                     {exp.skills.map((skill, idx) => (
