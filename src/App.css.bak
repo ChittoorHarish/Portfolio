@@ -287,17 +287,18 @@ html {
   letter-spacing: -4px;
   opacity: 0;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   height: 120px;
-  line-height: 120px;
   overflow: visible;
   white-space: nowrap;
   flex-shrink: 0;
   will-change: transform;
-  transform-origin: center;
+  transform-origin: left center;
   transition: transform 0.8s ease-in-out;
-  vertical-align: top;
-}
+  line-height: 1;
+  padding: 0 2px;
+  margin: 0 -2px;
+  box-sizing: content-box;
 
 .hc-h {
   position: relative;
@@ -365,11 +366,10 @@ html {
   position: absolute;
   left: 100%;
   top: 0;
-  height: 100%;
   transform: scaleX(0);
   transform-origin: left center;
-  margin-left: 5px;
-  line-height: 120px;
+  margin-left: 0;
+  padding-left: 2px;
   font-size: 120px;
   font-weight: 900;
   font-style: italic;
@@ -3327,59 +3327,6 @@ section::after {
   }
 }
 
-@media (max-width: 480px) {
-  .hc-letter {
-    font-size: 60px;
-  }
-
-  .hc-wrapper {
-    gap: 16px;
-  }
-
-  .hc-shine {
-    width: 20px;
-    height: 60px;
-  }
-
-  .name-letter {
-    font-size: 32px;
-    letter-spacing: 0.5px;
-  }
-
-  .name-line {
-    gap: 1px;
-  }
-
-  .accent-1 {
-    width: 110px;
-    top: 110px;
-  }
-
-  .accent-2 {
-    width: 140px;
-    top: 127px;
-  }
-
-  .role-text {
-    font-size: 12px;
-    padding: 9px 18px;
-    letter-spacing: 0.8px;
-  }
-
-  .role-badge {
-    top: 190px;
-  }
-
-  .corner-light {
-    width: 18px;
-    height: 18px;
-  }
-
-  .name-aura {
-    width: 350px;
-    height: 200px;
-  }
-
   .metallic-shine-sweep {
     width: 90px;
     height: 160px;
@@ -3408,4 +3355,3 @@ section::after {
     height: 200px;
   }
 }
-
