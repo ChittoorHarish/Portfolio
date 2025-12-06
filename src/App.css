@@ -354,9 +354,6 @@ html {
   background-clip: text;
   background-size: 200% 200%;
   animation: metallicShift 3s ease-in-out infinite;
-  filter: drop-shadow(0 8px 25px rgba(102, 126, 234, 0.6))
-          drop-shadow(0 0 40px rgba(240, 147, 251, 0.4))
-          drop-shadow(0 -5px 15px rgba(255, 255, 255, 0.3));
   white-space: nowrap;
 }
 
@@ -397,9 +394,6 @@ html {
   background-clip: text;
   background-size: 200% 200%;
   animation: metallicShift 3s ease-in-out infinite, expandText 1.2s ease-out 3.8s forwards;
-  filter: drop-shadow(0 8px 25px rgba(102, 126, 234, 0.6))
-          drop-shadow(0 0 40px rgba(240, 147, 251, 0.4))
-          drop-shadow(0 -5px 15px rgba(255, 255, 255, 0.3));
   opacity: 0;
 }
 
@@ -454,16 +448,16 @@ html {
 }
 
 .shine-1 {
-  width: 30px;
-  height: 120px;
+  width: 25px;
+  height: 100px;
   top: 0;
   left: 20%;
   animation-delay: 2.7s;
 }
 
 .shine-2 {
-  width: 25px;
-  height: 120px;
+  width: 20px;
+  height: 100px;
   top: 0;
   right: 20%;
   animation-delay: 2.8s;
